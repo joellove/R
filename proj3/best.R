@@ -1,31 +1,25 @@
 best <- function(state, outcome) {
+    
+    ## Init
     hospitalNameColIdx <- 2
     stateColIdx <- 7
-        
+    outcomes <- c('heart attack', 'heart failure', 'pneumonia')    
+    
     ## Read outcome data
     data <- read.csv("outcome-of-care-measures.csv", colClasses="character")
 
     ## Check that state and outcome are valid
     if(nrow(subset(data, data[,stateColIdx] == state, select = State)) <= 0){
         stop("invalid state")
-        return
     }
-    
-    if(outcome != "heart attack" 
-       && outcome != "heart failure" 
-       && outcome != "pneumonia"){
-        stop("invalid outcome")
-        return
-    }
+    if (!outcome %in% outcomes) stop('invalid outcome')
         
     ## Return hospital name in that state with lowest 30-day death rate
-    if(outcome == "heart attack"){
-        outColIdx <- 11
-    }else if(outcome == "heart failure" ){
-        outColIdx <- 17
-    }else if(outcome == "pneumonia" ){
-        outColIdx <- 23
-    }
+    
+    ## set outcome column index
+    if(outcome == outcomes[1]) outColIdx <- 11
+    else if(outcome == outcomes[2] ) outColIdx <- 17
+    else if(outcome == outcomes[3] ) outColIdx <- 23
 
     suppressWarnings(data[,outColIdx] <- as.numeric(data[,outColIdx]))
     subData <- subset(data, data[,stateColIdx] == state, select = c(hospitalNameColIdx,outColIdx))
@@ -35,9 +29,11 @@ best <- function(state, outcome) {
     ## If there is a tie for the best hospital for a given outcome, 
     ## then the hospital names should be sorted in alphabetical order 
     rowNum <- order(subData[,2], subData[,1])
+    ## result
     subData[rowNum,]$Hospital.Name[1]
 }
 
+#Test Result
 #> source("best.R")
 #> best("TX", "heart attack")
 #[1] "CYPRESS FAIRBANKS MEDICAL CENTER"
