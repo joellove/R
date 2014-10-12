@@ -1,0 +1,78 @@
+@charset "utf-8";
+table.calendarframe
+{
+	font-size:9pt;
+	color:white;
+	background-color:#026afe;
+	border:1 solid white;
+	border-right:1 solid gray;
+	border-bottom:1 solid gray;
+}
+
+table.calendar
+{
+	font-size:9pt;
+	background-color:#eeeeee;
+	border:1 solid white;
+	padding:1px;
+}
+
+td.sun
+{
+	font-size:9pt;
+	color:#ff0000;
+	background-color:#ffffff;
+	border:0 solid white;
+	text-align:right;
+}
+
+td.day
+{
+	font-size:9pt;
+	color:#000000;
+	background-color:#ffffff;
+	border:0 solid white;
+	text-align:right;
+}
+
+td.sat
+{
+	font-size:9pt;
+	color:#0000ff;
+	background-color:#ffffff;
+	border:0 solid white;
+	text-align:right;
+}
+
+td.today
+{
+	font-size:9pt;
+	color:#000000;
+	background-color:#77ff99;
+	border:0 solid white;
+	text-align:right;
+}
+
+span.thatYear
+{
+	font-weight: normal;
+	color: white;
+}
+
+span.thatMonth
+{
+	font-weight: normal;
+	color: white;
+}
+
+span.thisYear
+{
+	font-weight: bold;
+	color: yellow;
+}
+
+span.thisMonth
+{
+	font-weight: bold;
+	color: yellow;
+}
