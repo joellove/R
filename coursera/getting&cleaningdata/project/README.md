@@ -50,7 +50,7 @@ To run the script, source `run_analysis.R`. After running, you will see the foll
 
 ## Cleaned Data
 
-The resulting clean dataset is in this repository at: `data/cleaned.txt`. It contains one row for each subject/activity pair and columns for subject, activity, and each feature that was a mean or standard deviation from the original dataset.
+The resulting clean dataset is in this repository at: `getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/cleaned.txt`. It contains one row for each subject/activity pair and columns for subject, activity, and each feature that was a mean or standard deviation from the original dataset.
 
 ## Notes
 
