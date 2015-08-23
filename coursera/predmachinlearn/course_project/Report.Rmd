@@ -97,7 +97,7 @@ accuracy
 oose <- 1 - as.numeric(confusionMatrix(testData$classe, predictRf)$overall[1])
 oose
 ```
-So, the estimated accuracy of the model is 99.42% and the estimated out-of-sample error is 0.58%.
+So, the estimated accuracy of the model is 99.35% and the estimated out-of-sample error is 0.65%.
 
 ## Predicting for Test Data Set
 Now, we apply the model to the original testing data set downloaded from the data source. We remove the `problem_id` column first.  
