@@ -1,0 +1,27 @@
+setwd("~/GitHub/R/coursera/data_product/app")
+
+install.packages('devtools','Rtools')
+library(devtools)
+install.packages(c('ggplot2', 'shiny'))
+install.packages("ggplot2", dep=T)
+library(shiny)
+library(ggplot2)
+library(MASS)
+install_github('ramnathv/rCharts@dev')
+install.packages('dplyr')
+library(dplyr)
+install.packages('DT')
+library(DT)
+install.packages("data.table")
+library(data.table)
+
+devtools::install_github('rstudio/shinyapps')
+library(shinyapps)
+devtools::install_github('rstudio/rsconnect')
+library(rsconnect)
+
+shinyapps::setAccountInfo(name='homework-app', token='D9DA1CDAFC780C633AFE0486E3979809', secret='s6+7wowGFmvb5HF8HuNfioTA8jYjRth1FlqfmJHp')
+
+shinyapps::deployApp('~/GitHub/R/coursera/data_product/app')
+#deployApp()
+runApp()
