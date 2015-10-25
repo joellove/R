@@ -4,3 +4,4 @@ This Shiny App is for searching and visulizating LEGO Sets information from year
 The dataset is from [Rebrickable.com](http://rebrickable.com/) that contains the basic information of each set (set id, year, number of pieces, theme, set name).    
 
 The project is on Shiny User Showcase page (Shiny Apps with popular appeal): https://homework-app.shinyapps.io/app1
+The data source is [Github](https://github.com/joellove/R/tree/master/coursera/data_product/app)
